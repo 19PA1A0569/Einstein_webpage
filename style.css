@@ -1,0 +1,323 @@
+.body{
+    margin: 0%;
+    width:100%;
+}
+.container{
+    display:grid;
+    height:100vh;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows:0.1fr 1fr 1fr 1fr 1fr 1fr 0.1fr;
+    grid-template-areas: 
+    "header header header header header header header"
+    "home home home home home home home "
+    "bio bio bio bio bio bio bio"
+    "papers papers papers papers papers papers papers"
+    "blog  blog blog blog blog blog blog"
+    "images images images images images images images "
+    "footer  footer footer footer footer footer footer"
+    ;
+}
+header{
+    height:70px;
+    border:1px solid black;
+    background:#005f73;
+    grid-area: header;
+    margin:0%;
+    text-align: left;
+}
+
+.navbar img{
+    width:90px;
+    border-radius:50%;
+    height:70px;
+    float:right;
+}
+.navbar a.icon{
+    display: none;
+}
+.navbar a{
+    display:inline-block;
+    font-family: comic Sans MS;
+    font-size:156.25%;
+    color:#ffffff;
+    padding:15px;
+    text-decoration: none;
+}
+.navbar a:hover{
+    background-color: #e6d8df;
+    color: black;
+    font-weight: bolder;
+}
+#home{
+    grid-area: home;
+    background: #1a1423;
+    margin: 0%;    
+    
+}
+
+    .ein_img, .about_einstein {
+        display: inline-block; 
+        vertical-align: top; 
+    }
+
+    .ein_img img {
+        margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    }
+
+    .about_einstein h1{
+        font-size: 60px;
+        color: #d3dbe6;
+        margin-top: 100px;
+        margin-left: 130px; 
+        
+    }
+    .about_einstein h3{
+        font-size: 40px;
+        color: #d3dbe6;
+        margin-left: 240px; 
+    }
+#bio{
+    grid-area: bio;
+    background: #c2c7ce;
+    margin:0%;
+    
+}
+.biography h1{
+    margin-left: 10px;
+    font-size: 35px;
+}
+.bio_info{
+    margin-left: 160px;
+    width: 85%;
+    border: 3px solid #0a9396;
+    
+}
+.bio_info li{
+    line-height:1.5;
+    text-align:justify;
+    font-size: 18px;
+    padding-right: 20px;
+    
+}
+.bio_img img{
+    width:140px;
+    height:200px;
+    margin-left: 15px;
+    margin-top:-280px;
+    border-radius: 100px;
+}
+#papers{
+    grid-area: papers;
+    background: #dde2e6;
+    margin:0%;  
+}
+.publication h1{
+    margin-left: 10px;
+    font-size: 35px;
+}
+.pub1{
+    margin-left: 50px;
+    display: inline-block;
+}
+.pub1 a{
+    color: black;
+    text-align: center;
+    
+}
+.pub1 img{
+    border: 3px solid #1e86db ;
+    width:258px;
+    height:300px;
+    padding-left:0px;
+}
+
+#blog{
+    grid-area: blog;
+    background: #d3dbe6;
+    margin:0%;
+    padding-left: 180px;
+}
+.blogs h1{
+    margin-left: -160px;
+    font-size: 35px;
+}
+.blog1 img{
+    margin-left: 70px;
+    width: 400px;
+    margin-top: 30px;
+    height: 300px;
+   
+}
+.blog1{
+    width: 550px;
+    margin-top: -10px;
+    margin-left: 10px;
+    border: 3px solid #042655;
+    display: inline-block;
+}
+.blog1 h3{
+    margin-left: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+.blog1 p{
+    font-size: 20px;
+    width: 540px;
+    height: 100px;
+    margin-left: 10px;
+    text-align: center;
+}
+.blog_emoji img{
+    width:180px;
+    height:200px;
+    margin-left: -170px;
+    margin-top:-100px;
+    border-radius: 100px;
+}
+#images{
+    grid-area: images;
+    background: #2890a5;  
+}
+h1{
+    margin-left: 20px;
+    font-size: 35px;  
+}
+.einstein_images img{
+    display: inline-block;
+    width:272px;
+    height:230px;
+    margin-left:30px;
+    border:5px solid gainsboro;
+    justify-content:space-evenly;
+}
+footer{
+    width:100%;
+    background:black;
+    grid-area:footer;
+    height: 60px;
+}
+.footerclass p{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+@media only screen and (max-width:500px){
+    .container{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+        grid-template-areas:
+        "header"
+        "home"
+        "bio"
+        "papers"
+        "blog"
+        "images"
+        "footer"
+        ;
+        height:100vh;
+    }
+    header{
+        height:auto;
+        grid-area: header;
+    }
+    .navbar a{
+        display:none;
+    }
+    .navbar a.icon{
+        float: right;
+        display: block;
+    }
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        display: block;
+        text-align:left;
+        font-size:25px;
+        
+    }
+    .navbar img{
+        float: left;  
+    }
+    .ein_img img {
+        width: 180px;
+        height: 180px;
+        margin-left: 10px;
+    }
+
+    .about_einstein h1 {
+        font-size: 32px;
+        margin-left: 10px;
+    }
+
+    .about_einstein h3 {
+        font-size: 18px;
+        margin-left:50px;
+    }
+    .bio_info {
+        width: 350px; 
+        margin-left: 90px;
+        font-size: 16px; 
+    }
+    .bio_img img{
+        width:90px;
+        height: 120px;
+    }
+   
+    .pub1 img {
+        width: 250px;
+        height: auto;
+        margin-left: 0;
+    }
+
+    
+    .blog1 {
+        margin-left: -80px;
+        width: 350px;
+    }
+
+    .blog1 img {
+        margin-left: 30px;
+        width: 270px;
+        height: auto;
+    }
+
+    .blog1 h3 {
+        font-size: 22px;
+    }
+
+    .blog1 p {
+        font-size: 18px;
+        width: 100%;
+    }
+    .blog_emoji img{
+        width: 90px;
+        height: 110px;
+    }
+    .einstein_images img{
+        width: 350px;
+        height: 300px;
+    }
+    footer {
+        height: auto; 
+    }
+
+    .footerclass p {
+        font-size: 16px;
+    }
+    
+}
